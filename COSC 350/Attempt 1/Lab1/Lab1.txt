@@ -1,0 +1,74 @@
+Ian Thomas
+Lab 01
+COSC 350 - System Software
+
+Task 1
+1) /usr/include
+
+Task 2
+1) ../bin/ls
+
+Task 3
+2a) Read and write permissions
+2b) ithomas3 owns foo
+2c) students
+2d) Yes, I am in the group
+2e) I am in groups Users, Students
+
+3)chmod u-rw foo
+
+4)rm foo, resulted in prompt: rm: remove write-protected regular empty file ‘foo’?
+
+Task 4)
+
+2) Options for ls:
+    include hidden files (starting with .): -a
+    list with long format/show permissions: -l
+    recursively list directory tree: -R
+
+3) Output differs as for -l, less files are shown but more info for each is given
+  for -a, only file/directory names are given, but all are shown
+
+4) time 1: time - time a simple command or give resource usage
+   time 2: time - get time in seconds
+
+5) man - an interface to the on-line reference manuals
+
+Task 5)
+
+2)/mnt/linuxlab/home/ithomas3
+3) cd ../
+4)/mnt/linuxlab/home/
+5)permissions: read write execute
+
+Task 6)
+1) /bin/bash: ELF 64-bit LSB executable, x86-64, version 1
+2) empty
+3) ASCII Text
+4) directory
+
+Task 7)
+4) head ~/.bash_history
+5) tail ~/.bash_history
+
+Task 8)
+1) cp ~/.bash_history ~/dotbashhistory
+2) Read, Write, Execute permissions
+3) System created a new file, named dotbashhistory, copied all contents from .bash_history to dotbashhistory
+4) Permissions are identical, Read Write only. Dates are different
+
+Task 9)
+1)mv ~/dotbashhistory ~/dotbashhistory.old
+
+Task 10)
+1)rm ~/dotbashhistory.old
+
+Task 11)
+1) mkdir ~/Foo
+2) Read, Write, Execute
+3) mkdir Foo/Bar
+
+Task 12)
+1) rmdir: failed to remove ‘/mnt/linuxlab/home/ithomas3/Foo’: Directory not empty
+2) You would first have to remove Bar, then you could remove Foo
+3) rm -r ~/Foo
