@@ -1,0 +1,189 @@
+<html>
+
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>roogle, best engine search online</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <style>
+
+      html, body {
+        color: #323232;
+        font-family: 'Roboto', helvetica, sans-serif;
+        height: 100%;
+        margin: 0;
+      }
+
+    	h1 {
+    		font-size: 3em;
+    	}
+
+    	h2 {
+    		font-size: 2em;
+    	}
+
+    	h3 {
+    		font-size: 1.5em;
+    	}
+
+      ul li {
+
+        font-size: 16px;
+        font-family: helvetica, sans-serif;
+      }
+
+    	p {
+    		font-size: 1em;
+    	}
+
+      /*
+      overlay
+      */
+
+      #overlay {
+        position: fixed; /* Sit on top of the page content */
+        display: none; /* Hidden by default */
+        width: 100%; /* Full width (cover the whole page) */
+        height: 100%; /* Full height (cover the whole page) */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+        z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+        cursor: pointer; /* Add a pointer on hover */
+      }
+
+      /*
+      buttons
+      */
+
+      .appbtn {
+
+        border: none;
+        border-radius: 3px;
+        background-color: #C6C6C6;
+        padding: 8px 16px;
+        font-size: 16px;
+        cursor: pointer;
+        color: black;
+        transition: 0.2s;
+
+      }
+
+      .appbtn:hover {
+        background-color: #9E9E9E;
+      }
+
+      #hero {
+        background-image: white; /*linear-gradient(141deg, #83a4d4 0%, #b6fbff 90%) */;
+        color: #494949;
+      }
+
+      #hero h1 {
+        font-size: 50px;
+        font-weight: 300;
+      }
+
+      .content-box {
+        float: none;
+        margin: 0 auto;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div id="overlay"></div>
+
+  <div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+      <form class="col-4">
+      <div class="form-group">
+        <h1>
+          <span style="color: blue;">R</span>
+          <span style="color: red;">O</span>
+          <span style="color: gold;">O</span>
+          <span style="color: blue;">G</span>
+          <span style="color: green;">L</span>
+          <span style="color: red;">E</span>
+        </h1>
+
+      </div>
+      <div class="form-group">
+        <div class="form-group">
+          <input type="TEXT" class="form-control" id="searchterms" placeholder="Enter Term Search">
+        </div>
+        <button id="search" type="button" class="appbtn">roogle</button>
+        &nbsp;
+        <button id="luck" type="button" class="appbtn">i am luck</button>
+      </div>
+    </form>
+    </div>
+  </div>
+
+  <div id="dialog" title="enter some search">
+    <p>stupid</p>
+  </div>
+
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+
+      $('div#dialog').on('dialogclose', function(event) {
+        $("#overlay").css("display","none");
+      });
+
+      $('#searchterms').keypress(function(e){
+
+       var key = e.which;
+       if(key == 13){
+          $('#search').click();
+          return false;
+        }
+      });
+
+      $("#search").click(function(){
+
+        if($("#searchterms").val().length == 0){
+          $("#overlay").css("display","block");
+          $("#dialog").dialog();
+          return;
+        }
+
+        $.ajax({
+          url: '/search',
+          type: 'POST',
+          data: {
+            terms: $("#searchterms").val(),
+          },
+          datatype: 'json',
+          success: function(data){
+            location.href='/results';
+          }
+
+        });
+
+      });
+
+    });
+
+  </script>
+
+</html>
