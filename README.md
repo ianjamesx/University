@@ -1,7 +1,7 @@
-# University
+# Salisbury University, Computer Science Course Content
 All code related to university courses. Labs, projects, code-exams, etc.
 
-Courses/Grade Recieved:
+All Courses, and Grade Recieved:
 
 COSC 117: A  
 COSC 120: A  
