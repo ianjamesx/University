@@ -1,0 +1,30 @@
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>style testing</title>
+  </head>
+
+  <style>
+
+    h1 {
+      font-family: sans-serif;
+      color: black;
+      font-size: 48px;
+    }
+
+  </style>
+
+  <body>
+    <h1>This header is black rn</h1>
+    <button>Click This to turn it yellow</button>
+    <h1 style="color: LightGoldenRodYellow; background-color: black">This one should be LightGoldenRodYellow tho</h1>
+  </body>
+
+  <script>
+
+    $("h1").css("color: LightGoldenRodYellow; background-color: black");
+
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</html>

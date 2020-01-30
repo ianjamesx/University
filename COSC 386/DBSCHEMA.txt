@@ -1,0 +1,97 @@
+Ian Thomas
+Database Schema
+COSC 386
+
+mysql> show tables;
++----------------------+
+| Tables_in_ithomas3DB |
++----------------------+
+| CanTeach             |
+| Class                |
+| Course               |
+| Dept                 |
+| EnrolledIn           |
+| Faculty              |
+| Student              |
+| StudentCopy          |
++----------------------+
+8 rows in set (0.00 sec)
+
+mysql> describe CanTeach;
++--------+---------+------+-----+---------+-------+
+| Field  | Type    | Null | Key | Default | Extra |
++--------+---------+------+-----+---------+-------+
+| fid    | int(11) |  NO  | PRI | NULL    |       |
+| number | int(11) |  NO  | PRI | NULL    |       |
+| dname  | int(11) |  NO  | PRI | NULL    |       |
++--------+---------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> describe Class;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| section  | int(11)     | NO   | PRI | NULL    |       |
+| schedule | varchar(40) | NO   | PRI | NULL    |       |
+| room     | varchar(10) | YES  |     | NULL    |       |
+| number   | int(11)     | NO   | PRI | NULL    |       |
+| dname    | int(11)     | NO   | PRI | NULL    |       |
+| fid      | int(11)     | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> describe Course;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| number | int(11)     | NO   | PRI | NULL    |       |
+| dname  | int(11)     | NO   | PRI | NULL    |       |
+| title  | varchar(20) | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> describe Dept;
++-------+---------+------+-----+---------+-------+
+| Field | Type    | Null | Key | Default | Extra |
++-------+---------+------+-----+---------+-------+
+| dname | int(11) |  NO  | PRI | NULL    |       |
++-------+---------+------+-----+---------+-------+
+1 row in set (0.00 sec)
+
+mysql> describe EnrolledIn;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| grade     | int(11)     | NO   |     | NULL    |       |
+| sid       | int(11)     | NO   | MUL | NULL    |       |
+| section   | varchar(10) | NO   | MUL | NULL    |       |
+| semeseter | varchar(25) | NO   | MUL | NULL    |       |
+| number    | int(11)     | NO   | MUL | NULL    |       |
+| dname     | int(11)     | NO   | MUL | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> describe Faculty;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| fid   | int(11)     | NO   | PRI | NULL    |       |
+| name  | varchar(20) | YES  |     | NULL    |       |
+| rank  | varchar(15) | YES  |     | NULL    |       |
+| dname | int(11)     | YES  | MUL | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> describe Student;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| sid      | int(11)     | NO   | PRI | NULL    |       |
+| name     | varchar(20) | YES  |     | NULL    |       |
+| standing | bit(1)      | YES  |     | NULL    |       |
+| fid      | int(11)     | YES  | MUL | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> 
+ 

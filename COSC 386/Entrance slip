@@ -1,0 +1,15 @@
+Ian Thomas
+Entrance Slip
+
+Join statements
+
+Join statements are used to combine rows from two or more tables based on a related column
+between the tables. For example, if you were to have two tables with a related column ID,
+then you could join the two tables based on that related ID column. A join selects records
+from both tables. There are four types of joins, inner joins, outer joins, left joins, and
+right joins.
+
+Left joins return all records from the 'left' table, and matched records from right table
+Right joins return all records from 'right' table, matched records from left
+Outer joins retrurn all records matched
+Inner joins return all records matched in both tables

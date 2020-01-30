@@ -1,0 +1,83 @@
+Ian Thomas
+SQL Lab - Part II
+
+a) SELECT maker, model FROM Product WHERE model IN(SELECT model FROM Laptop WHERE hd>30);
+
++-------+------+
+| maker | hd   |
++-------+------+
+| A     |  240 |
+| A     |  240 |
+| A     |  240 |
+| A     |   80 |
+| A     |   80 |
+| A     |   80 |
+| A     |   60 |
+| A     |   60 |
+| A     |   60 |
+| A     |   60 |
+| A     |   60 |
+| A     |   60 |
+| A     |  120 |
+| A     |  120 |
+| A     |  120 |
+| A     |   80 |
+| A     |   80 |
+| A     |   80 |
+| A     |  120 |
+| A     |  120 |
+| A     |  120 |
+| A     |  100 |
+| A     |  100 |
+| A     |  100 |
+| A     |   80 |
+| A     |   80 |
+| A     |   80 |
+| A     |  160 |
+| A     |  160 |
+| A     |  160 |
++-------+------+
+
+b) 
+
+c) SELECT hd FROM PC GROUP BY hd HAVING COUNT(*) > 1;
+
+
++------+
+| hd   |
++------+
+|   80 |
+|  160 |
+|  250 |
++------+
+
+
+d) SELECT speed, ram FROM PC pc1 WHERE(SELECT COUNT(*) FROM PC pc2 WHERE pc2.ram = pc1.ram AND pc2.speed = pc1.speed) > 1;
+
++-------+------+
+| speed | ram  |
++-------+------+
+|  2.80 | 1024 |
+|  2.80 | 1024 |
++-------+------+
+
+
+e) 
+
+Three cases for natural join)
+-If two tables have no common attributes, natural join will end up same as cross product
+-If two tables have same attribute, look at common values to match up. If they have no common values, result is empty set.
+-Natural join on common values
+
+Ex)
+A B	B C
+1 2	2 3
+3 4	4 5
+5 6	2 8
+
+T1 T2 -> 
+
+A B C
+1 2 3
+3 4 5
+1 2 8

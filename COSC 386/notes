@@ -1,0 +1,23 @@
+Constraints
+-defines relationship or limitation among data elements that the DBMS is required to enforce
+
+-primary/unique keys
+-foreign keys or referential-integrity
+-attribute based constraints
+-assertions: boolean SQL statement
+
+Default: reject mods
+Cascade: Make same changes in relation
+set NULL: change to NULL
+
+Delete Bud tuple from Beers
+
+ON DELETE SET NULL
+ON UPDATE CASCADE
+
+Attribute Based Check
+Tuple Based Check
+
+Assertions
+
+CREATE ASSERTION <name> CHECK (<condition>)
