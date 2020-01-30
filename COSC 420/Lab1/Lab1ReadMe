@@ -1,0 +1,28 @@
+Ian Thomas
+Lab 01
+README
+
+
+USING THE PROGRAM:
+
+To use the program, compile using mpicc, when executing, input the number you wish
+to test for primality by entering it after the ./a.out
+
+e.g.) ./a.out 175
+
+The program will list every two numbers (excluding the input * 1) which multiplied
+results in the input
+
+If you see no output, the input is prime
+
+NOTE: ENSURE INPUT IS IN CORRECT ORDER
+
+for example, the number being tested should come IMMEDIATELY after executable name
+
+mpiexec ./a.out 127 -n 4    <-- correct
+mpiexec ./a.out -n 4 127    <-- will not work
+
+DESIGN:
+
+The number of ops (work per node) is calculated, then ranges are set which are used to
+assign all nodes an amount of operations (numbers) to handle

@@ -1,0 +1,40 @@
+
+
+if(rank == 0){
+
+  int i, j;
+  int approxmax = 0, approxmaxrects = 0;
+
+  //get the maximum dimmension we have to iterate up to
+  //essentially the sqrt(2mil)
+  int tar = 2000000;
+  int maxdim = ceil(sqrt(tar));
+
+
+
+  for (i = 0; i < maxdim; i++){
+
+    for (j = i; j < maxdim; j++){
+
+      int r = rects(i,j);
+
+      if (abs(approxmaxrects - tar) > abs(r - tar)){
+
+        approxmax = (i * j);
+        approxmaxrects = r;
+
+      }
+
+      //if we go over our tar (of 2 mil rects)
+      //we can just leave
+      if (r > tar){
+        break;
+      }
+
+    }
+
+  }
+
+  printf("The grid of area %d can hold %d rectangles\n", approxmax, approxmaxrects);
+
+}

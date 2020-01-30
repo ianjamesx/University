@@ -1,0 +1,15 @@
+[hpcl3-3:18336:0:18336] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x46092000)
+==== backtrace ====
+    0  /lib64/libucs.so.0(+0x174f0) [0x2b363e6dc4f0]
+    1  /lib64/libucs.so.0(+0x176a2) [0x2b363e6dc6a2]
+    2  /mnt/linuxlab/home/ithomas3/420/project/a.out() [0x401a69]
+    3  /lib64/libc.so.6(__libc_start_main+0xf5) [0x2b362b7a9505]
+    4  /mnt/linuxlab/home/ithomas3/420/project/a.out() [0x400859]
+===================
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node hpcl3-3 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------

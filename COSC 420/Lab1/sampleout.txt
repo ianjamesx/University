@@ -1,0 +1,54 @@
+Sample Output
+
+Testing Integers: 123231, 328923, 10571
+
+NOTE: First output has the distribution of work across the nodes
+
+
+bash-4.2$ mpiexec a.out
+node id: 0, work:29 ops, lower:0, upper: 29
+node id: 6, work:29 ops, lower:174, upper: 203
+node id: 2, work:29 ops, lower:58, upper: 87
+node id: 3, work:29 ops, lower:87, upper: 116
+node id: 5, work:29 ops, lower:145, upper: 174
+node id: 11, work:29 ops, lower:319, upper: 348
+node id: 4, work:29 ops, lower:116, upper: 145
+node id: 7, work:29 ops, lower:203, upper: 232
+node id: 9, work:29 ops, lower:261, upper: 290
+node id: 8, work:29 ops, lower:232, upper: 261
+node id: 10, work:29 ops, lower:290, upper: 319
+node id: 1, work:29 ops, lower:29, upper: 58
+its not prime: 3 * 41077 = 123231
+bash-4.2$ mpicc prime.c -lm
+prime.c: In function ‘main’:
+prime.c:25:15: warning: incompatible implicit declaration of built-in function ‘sqrt’ [enabled by default]
+   int limit = sqrt(input * 1.0);
+               ^
+bash-4.2$ mpiexec a.out
+its not prime: 3 * 41077 = 123231
+bash-4.2$ mpicc prime.c -lm
+prime.c: In function ‘main’:
+prime.c:25:15: warning: incompatible implicit declaration of built-in function ‘sqrt’ [enabled by default]
+   int limit = sqrt(input * 1.0);
+               ^
+bash-4.2$ mpiexec a.out
+its not prime: 3 * 109641 = 328923
+its not prime: 7 * 46989 = 328923
+its not prime: 9 * 36547 = 328923
+its not prime: 483 * 681 = 328923
+its not prime: 21 * 15663 = 328923
+its not prime: 161 * 2043 = 328923
+its not prime: 23 * 14301 = 328923
+its not prime: 63 * 5221 = 328923
+its not prime: 207 * 1589 = 328923
+its not prime: 69 * 4767 = 328923
+its not prime: 227 * 1449 = 328923
+bash-4.2$ mpicc prime.c -lm
+prime.c: In function ‘main’:
+prime.c:25:15: warning: incompatible implicit declaration of built-in function ‘sqrt’ [enabled by default]
+   int limit = sqrt(input * 1.0);
+               ^
+bash-4.2$ mpiexec a.out
+its not prime: 11 * 961 = 10571
+its not prime: 31 * 341 = 10571
+bash-4.2$
