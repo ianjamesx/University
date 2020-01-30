@@ -1,0 +1,13 @@
+1) What compilation commands are executed by make?
+  -make prog compiles all dependencies of prog.cpp,
+  in this case, foo.cpp and bar.cpp
+
+2) Type make again, since program is "up to date" should not be
+anything to make. What does make command do?
+ -only recompiles the prog.cpp file, does not compile any other
+  files
+
+3) Edit file foo.h in some simple way. Save modified file, use
+make command again, what compilation commands are executed?
+  -only recompiles prog.cpp and foo.cpp, as foo.h has been
+   changed while bar.h has not
