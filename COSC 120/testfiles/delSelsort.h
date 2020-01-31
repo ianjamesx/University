@@ -1,0 +1,10 @@
+#ifndef DELSELSORT
+#define DELSELSORT
+
+class delSelsort {
+  
+  public: void doubleSelectSort(int [], int);
+
+}
+
+#endif
