@@ -1,7 +1,7 @@
 # Salisbury University, Computer Science Course Content
 All code related to university courses. Labs, projects, code-exams, etc.
 
-All Courses, Grade Recieved:
+## All Courses, Grade Recieved:
 
 COSC 117: A  
 COSC 120: A  
@@ -15,14 +15,14 @@ COSC 390: PS (pass)
 COSC 420: A  
 COSC 425: (In Progress)  
 
-Fun Facts:
+## Fun Facts:
 
 calculated from  ianjamesx nodelinereader:
-## Total lines of code written: 50341
-## Total files created: 392
+**Total lines of code written: 50341
+Total files created: 392**
 
 
-Course Titles:
+## Course Titles:
 
 COSC 117: Fundamentals of Programming  
 COSC 120: Computer Science I  
