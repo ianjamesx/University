@@ -18,8 +18,8 @@ COSC 425: (In Progress)
 ## Fun Facts:
 
 calculated from  ianjamesx nodelinereader:
-**Total lines of code written: 50341
-Total files created: 392**
+**Total lines of code written: 50341  
+Total files created: 392**  
 
 
 ## Course Titles:
