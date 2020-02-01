@@ -21,6 +21,8 @@ calculated from  ianjamesx nodelinereader (coming soon to github):
 **Total lines of code written: 50,341  
 Total files created: 392**  
 
+note that many files/lines may be duplicate of libraries given for lab tasks
+
 
 ## Course Titles:
 
