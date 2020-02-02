@@ -15,7 +15,7 @@ COSC 390: PS (pass)
 COSC 420: A  
 COSC 425: (In Progress)  
 
-## Fun Facts:
+## Stats:
 
 calculated from  ianjamesx nodelinereader (coming soon to github):  
 **Total lines of code written: 50,341  
