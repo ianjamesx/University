@@ -45,10 +45,7 @@ void appendtofileReverse(int filedes[], int offsets[], int currfile, int targetf
 
     //set from the start to the total offset minus the current iteration
     lseek(filedes[currfile], (totaloffset - i), SEEK_SET);
-
     read(filedes[currfile], buffer, buffersize);
-
-    //printf("offset %d, %s\n", totaloffset, buffer);
 
     //write to clone
     write(filedes[targetfile], buffer, buffersize);

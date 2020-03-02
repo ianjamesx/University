@@ -22,15 +22,19 @@ int main(){
   umask(0);
   filedes[1] = open("foorev", O_RDWR | O_CREAT, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP);
 
-  //use lseek to jump to end of file
-  if((offset[0] = lseek (filedes[0], O_RDONLY, SEEK_END)) == -1){
-    printf("Creat seekl Error");
+  //use pread to get file size (cant use lseek)
+
+  offset[0] = 0;
+
+  char temp[1];
+  while(pread(filedes[0], temp, 1, offset[0]) != 0){
+    offset[0]++;
   }
 
   //append contents of foo and foo1 to foo12
   appendtofileReverse(filedes, offset, 0, 1, buffersize);
 
-  close(filedes, 2);
+  closefiles(filedes, 2);
 
   //printf("offset = %d\n", offset[0]);
   return 0;
@@ -46,8 +50,6 @@ void appendtofileReverse(int filedes[], int offsets[], int currfile, int targetf
 
     //set from the start to the total offset minus the current iteration
     pread(filedes[currfile], buffer, buffersize, (totaloffset - i), SEEK_SET);
-
-    //printf("offset %d, %s\n", totaloffset, buffer);
 
     //write to clone
     write(filedes[targetfile], buffer, buffersize);
