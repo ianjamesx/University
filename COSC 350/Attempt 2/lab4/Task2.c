@@ -23,11 +23,11 @@ int main(int argc, char **argv){
 
   //read input, check if curr char is digit
   while(read(filedes[0], b, 1) > 0){
-    if(b[0] == ' '){
+    if(b[0] == ' ' || b[0] == '\n'){ //space or line break denotes end of ascii
       currchar[curr] = '\0'; //end string
       writeasciichar(filedes[1], currchar); //write to follow
       curr = 0; //reset curr
-      printf("%s\n", currchar);
+      //printf("%s\n", currchar);
     } else {
       currchar[curr] = b[0];
       curr++;
