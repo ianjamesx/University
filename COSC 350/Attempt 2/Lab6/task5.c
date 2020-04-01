@@ -11,11 +11,13 @@ int stringtoint(char *c){
   //convert string to int
   int i = 0;
   long int num = 0;
+
+  printf("INPUT IS %s", c);
   while(c[i] != '\0'){
     num = 10 * num + (c[i] - '0');
     i++;
   }
-
+  printf("OUTPUT IS %d", num);
   return num;
 
 }
@@ -52,13 +54,11 @@ void parentHandler(){
 */
 int main(int argc, char **argv){
 
-  //umask(0);
+  umask(0);
 
   if(argc != 2){
-
-    printf("Usage: ./task5 [file]\n");
+    printf("Usage: ./task5 [inputfile]\n");
     exit(1);
-
   }
 
   int infile, childout, parentout;
@@ -68,35 +68,44 @@ int main(int argc, char **argv){
     exit(1);
   }
 
-  //printf("%d\n", infile);
+
+  printf("%d\n", infile);
 
   //int filesize = lseek(infile, (off_t)0, SEEK_END);
-  pid_t pid;
+  pid_t pid = 1;
   pid = fork();
+  printf("Forked to id: %d\n", pid);
 
   char buffer[1];
   int nread;
-  int i;
+  int i
 
   switch(pid){
 
     case -1:
       perror("fork failed");
       exit(1);
+
     case 0:
 
     //child process
 
-      if((childout = open("child.txt", O_WRONLY | O_CREAT, 0666) == -1)){
+     if((childout = open("child.txt", O_WRONLY | O_CREAT, 0666) == -1)){
         printf("err, cannot open output child file\n");
         exit(1);
-      }
+     }
 
+     printf("child output file open, reading file\n");
+    printf("READING FILE: %d", infile);
       while ((nread = read(infile, buffer, 1) > 0)){
+          printf("child: %s", buffer);
         if(isNumeric(buffer[0]) == 0){
+            printf("child in: %s", buffer);
           write(childout, buffer, nread);
         }
       }
+
+      printf("Child process complete\n");
 
       //signal(SIGINT);
 
@@ -107,18 +116,24 @@ int main(int argc, char **argv){
 
       //sighandler_t sig;
       //sig = signal(SIGINT, parentHandler);
-      pause();
+      //pause();
 
       if((parentout = open("parent.txt", O_WRONLY | O_CREAT, 0666) == -1)){
         printf("err, cannot open output parent file\n");
         exit(1);
       }
 
+      printf("parent output file open, reading file\n");
+
+      printf("READING FILE: %d", infile);
+
       while ((nread = read(infile, buffer, 1) > 0)){
         if(isNumeric(buffer[0]) == 1){
           write(parentout, buffer, nread);
         }
       }
+
+       printf("Parent process complete\n");
 
     break;
   }
