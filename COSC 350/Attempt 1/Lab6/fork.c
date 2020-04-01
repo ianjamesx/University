@@ -25,7 +25,7 @@ int main(int argc, char **argv){
   int n;
 
   if(argc < 4){
-    printf("Not enough arguments, please input four integers\n");
+    printf("Usage: ./fork [nc] [np] [tc] [tp]\n");
     return 0;
   }
 
@@ -41,7 +41,8 @@ int main(int argc, char **argv){
 
   switch (pid) {
     case -1:
-      perror("fork failed");
+      perror("fork failed\n");
+      exit(1);
     break;
     case 0:
       message = "This is the child";

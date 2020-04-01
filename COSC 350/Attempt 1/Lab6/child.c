@@ -26,13 +26,13 @@ int main(int argc, char **argv){
   int n;
 
   if(argc < 3){
-    printf("Not enough arguments, please input four integers\n");
+    printf("Usage: ./child  [message] [nc] [tc]\n");
     return 0;
   }
 
-  char *message = argv[0];
-  int nc = stringtoint(argv[1]),
-      tc = stringtoint(argv[2]);
+  char *message = argv[1];
+  int nc = stringtoint(argv[2]),
+      tc = stringtoint(argv[3]);
 
   //output for each process
 
@@ -41,6 +41,6 @@ int main(int argc, char **argv){
     sleep(tc);
   }
 
-  exit(0);
+  return 0;
 
 }

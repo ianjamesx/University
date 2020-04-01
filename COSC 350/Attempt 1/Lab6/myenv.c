@@ -53,7 +53,7 @@ char *mygetenv(char *name){
 int main(int argc, char *argv[]){
 
 	if(argc!=2){
-		printf("Please input an env variable name\n");
+		printf("Usage: ./myenv [env_variable_name]\n");
 		return -1;
 	}
 
