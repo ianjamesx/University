@@ -1,0 +1,14 @@
+running state - process loaded into CPU
+ready state - ready to be loaded into CPU
+blocked state - process awaiting I/O
+trans1 - process blocked for I/O
+trans2 - process finished
+trans3 - process executed
+trans4 - process completed I/O
+
+race - two or more processes read/write to one file, first one wins
+mutal exclusion crit sect - making critical data exclusive to certain processes or restricting read/write of parent/child
+orphan - process parents killed, still running
+
+fork() - independent memory space, pid = 0
+vfork() - shares memory space with parent
