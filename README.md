@@ -8,12 +8,12 @@ COSC 120: A
 COSC 220: A  
 COSC 250: A  
 COSC 320: A  
-COSC 350: A
-COSC 370: A
+COSC 350: A  
+COSC 370: A  
 COSC 386: A  
 COSC 390: PS (pass)  
 COSC 420: A  
-COSC 425: A
+COSC 425: A  
 
 ## Stats:
 
