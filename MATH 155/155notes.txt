@@ -1,0 +1,16 @@
+NOTES FOR 155
+
+Qualitative: classify data into categories
+  ordinal: has a natural order
+  nominal: has no natural order
+
+
+Quantitative: Numeric, how much
+  discrete: variable whose possible values can be listed or counted
+  continuous: variable that can assume any value on an interval
+
+DESIGN OF EXPERIMENTS
+
+experimental unit - individual which is studied
+outcome response - what is measured of each experimental unit
+treatments - procedure applied to each experimental unit
