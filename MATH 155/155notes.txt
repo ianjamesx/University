@@ -14,3 +14,25 @@ DESIGN OF EXPERIMENTS
 experimental unit - individual which is studied
 outcome response - what is measured of each experimental unit
 treatments - procedure applied to each experimental unit
+
+----
+
+Observational Study
+Study wehre assignment to treatment group is not done by investigator
+
+In a perfrect study, groups would not differ in any way except how they recieve treatement
+In practice, not possible, randomization is next best thing
+
+If large difference, can conclude likely due to treatment
+
+Cofounding
+Could be other factors influencing result
+
+Cohort
+Group of people linked in some way
+
+Cohort study
+Group of subjects to determine if factor of interest are associated with an outcome
+
+Prospective cohort study - subjects followed over time
+Cross sectional - measurements taken at one point in time
