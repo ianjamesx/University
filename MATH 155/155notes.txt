@@ -43,3 +43,7 @@ Group of subjects to determine if factor of interest are associated with an outc
 Prospective cohort study - subjects followed over time
 Cross sectional - measurements taken at one point in time
 Retrospective - observational study where cases have happened before study takes place
+
+BIAS
+
+Example: if we draw a simple random sample for a study, may not be accruate, average many simple random samples
