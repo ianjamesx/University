@@ -28,6 +28,9 @@ If large difference, can conclude likely due to treatment
 Cofounding
 Could be other factors influencing result
 
+Outcome variable
+what is being measured after treatement
+
 Cohort
 Group of people linked in some way
 
