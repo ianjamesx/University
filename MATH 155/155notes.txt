@@ -58,7 +58,7 @@ gives approx. percentage of values that fall within standard deviation from mean
 95% within 2sd
 99.9% within 3sd
 
-CHevyhev's Theorom
+Chevyhev's Theorom
 Applies to any dataset. Gves a lower bound fro percentages of values that are within a certain number of standard devs from mean
 At least 75% within 2sd
 At least 89% within 3sd
@@ -69,3 +69,6 @@ CV - tells how large the standard deviation is relative to the mean (standard de
 Measures of Position
 Description of relative standing of a certain data value within entire data set
 The standard score (z score) represents distance value is from the mean
+
+
+Percentiles - divivde dataset into 100 parts (e.g. 27% percentile)
