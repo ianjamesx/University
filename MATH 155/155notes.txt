@@ -47,3 +47,10 @@ Retrospective - observational study where cases have happened before study takes
 BIAS
 
 Example: if we draw a simple random sample for a study, may not be accruate, average many simple random samples
+
+
+-------
+
+Empirical rule
+applies to bell shaped distribution
+gives approx. percentage of values that fall within standard deviation from mean
