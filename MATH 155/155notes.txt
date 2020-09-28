@@ -54,3 +54,6 @@ Example: if we draw a simple random sample for a study, may not be accruate, ave
 Empirical rule
 applies to bell shaped distribution
 gives approx. percentage of values that fall within standard deviation from mean
+68% within 1sd
+95% within 2sd
+99.9% within 3sd
