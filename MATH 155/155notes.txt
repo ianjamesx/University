@@ -57,3 +57,8 @@ gives approx. percentage of values that fall within standard deviation from mean
 68% within 1sd
 95% within 2sd
 99.9% within 3sd
+
+CHevyhev's Theorom
+Applies to any dataset. Gves a lower bound fro percentages of values that are within a certain number of standard devs from mean
+At least 75% within 2sd
+At least 89% within 3sd
