@@ -70,5 +70,10 @@ Measures of Position
 Description of relative standing of a certain data value within entire data set
 The standard score (z score) represents distance value is from the mean
 
-
 Percentiles - divivde dataset into 100 parts (e.g. 27% percentile)
+
+to find percentile, (e.g. P58 for 58th percentile) compute Locator 
+Compute locater L using formula L = k/100(n) (n=number of values in dataset)
+
+If L is an integer then Pk = (Lth value + (L+1)th value) / 2
+If L is not an integer then round up to the next larger integer 
