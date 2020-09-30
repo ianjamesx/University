@@ -59,7 +59,7 @@ gives approx. percentage of values that fall within standard deviation from mean
 99.9% within 3sd
 
 Chevyhev's Theorom
-Applies to any dataset. Gves a lower bound fro percentages of values that are within a certain number of standard devs from mean
+Applies to any dataset. Gves a lower bound for percentages of values that are within a certain number of standard devs from mean
 At least 75% within 2sd
 At least 89% within 3sd
 
