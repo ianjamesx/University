@@ -5,6 +5,8 @@ using namespace std;
 void getPercentileValue();
 void getPercentile();
 void getQuartiles();
+void interQuartileRange(int);
+void findOutliers(int);
 
 int main(){
     
@@ -22,6 +24,26 @@ void getQuartiles(){
     cout << "First quartile: " << ceil(n * .25) << endl;
     cout << "Second quartile: " << ceil(n * .5) << endl;
     cout << "Third quartile: " << ceil(n * .75) << endl;
+
+    interQuartileRange(n);
+    findOutliers(n);
+
+}
+
+void findOutliers(int n){
+    //lower outelier bound: Q1 - 1.5IQR
+    //uppper outlier bound: Q3 + 1.5IQR
+    //if any data is less than lower outelier boundary or greater than the upper boundary, it is outlier
+
+    float iqr = (ceil(n * .75) - ceil(n * .25));
+
+    cout << "Lower outlier bound (value): " << ceil(n * .25) - (1.5 * iqr) << endl;
+    cout << "Upper outlier bound (value): " << ceil(n * .75) + (1.5 * iqr) << endl;
+}
+
+void interQuartileRange(int n){
+
+    cout << "IQR: " << (ceil(n * .75) - ceil(n * .25)) << endl;
 
 }
 
