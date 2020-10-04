@@ -20,6 +20,25 @@ e.g. average age of employees at factory is 30
 
 ----
 
+Graphs
+
+stem/leaf - put first digit on left of line, other digits on right
+dot plot - write values below, put dot for every instance of value
+
+frequency distribution
+Frequency distributions for quantitative data are just like those for qualitative data
+except that the data are divided into classes rather than categories.
+
+relative frequency = frequency / sum of all frequencies
+
+The cumulative frequency of a class is the sum of the frequencies of that class and all previous classes.
+cumulative relative frequency = cumulative freq. / sum al off freqs.
+
+Ogives - 
+
+
+----
+
 Observational Study
 Study wehre assignment to treatment group is not done by investigator
 
