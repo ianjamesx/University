@@ -15,6 +15,9 @@ experimental unit - individual which is studied
 outcome response - what is measured of each experimental unit
 treatments - procedure applied to each experimental unit
 
+parameter - characteristic of entire population of interest
+e.g. average age of employees at factory is 30
+
 ----
 
 Observational Study
