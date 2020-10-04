@@ -34,7 +34,9 @@ relative frequency = frequency / sum of all frequencies
 The cumulative frequency of a class is the sum of the frequencies of that class and all previous classes.
 cumulative relative frequency = cumulative freq. / sum al off freqs.
 
-Ogives - 
+
+Frequency Polygon - get midpoints of each class (for freq. distribution), put on x-axis, frequency on y-axis
+relative frequency polygon - same, except use relative frequency on y-axis
 
 
 ----
