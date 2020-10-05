@@ -1,5 +1,12 @@
 NOTES FOR 155
 
+types of samples
+
+simple random sample - size n, chosen by method in which each sample of size n has equal chance of being selected, and is representative
+random sample - sample chosen by method in which individual in population has equal chance of being selected
+
+----
+
 Qualitative: classify data into categories
   ordinal: has a natural order
   nominal: has no natural order
