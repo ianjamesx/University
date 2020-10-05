@@ -5,6 +5,16 @@ types of samples
 simple random sample - size n, chosen by method in which each sample of size n has equal chance of being selected, and is representative
 random sample - sample chosen by method in which individual in population has equal chance of being selected
 
+convenience sample - sample thats not drawn by well define method (if does not differe systematically, it is ok)
+
+statififed sampling - population is divided into groups (strata) that differ, groups are alike in some way
+
+cluster - population is divided into groups (clusters0 that are heterogenous, randomly select clusters for our sample (useful in large pop.)
+
+systematic - items ordered, every kth item is chosen
+
+volunatry response (not reliable)
+
 ----
 
 Qualitative: classify data into categories
@@ -22,8 +32,11 @@ experimental unit - individual which is studied
 outcome response - what is measured of each experimental unit
 treatments - procedure applied to each experimental unit
 
-parameter - characteristic of entire population of interest
+parameter - number that describes population
 e.g. average age of employees at factory is 30
+
+staticstic - number that describes sample
+e.g. 57% of respondants support change
 
 ----
 
