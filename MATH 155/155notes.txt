@@ -94,6 +94,17 @@ BIAS
 
 Example: if we draw a simple random sample for a study, may not be accruate, average many simple random samples
 
+Voluntary Response bias - willing to respond/stronger opinions
+
+self interest bias - something to gain/incentive to be bias
+
+social acceptability bias - people reluctant to admit behavior that will reflect bad on them
+
+leading question bias - question worded to suggest a particular response
+
+non response bias - many people will refuse to answer quetions (non responders)
+
+sampling bias - some members of population likely to be included in the sample than others
 
 -------
 
