@@ -143,3 +143,4 @@ an event formed by combining two or more events, Events A or B (inclusive) eithe
 Events A and B - A and B occur
 
 Probabillity of (A or B) = P(A)+P(B) - P(A and B)
+Mutually exclusive - two events cannot happen at same time
