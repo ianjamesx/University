@@ -141,3 +141,5 @@ EVENTS
 Compound events
 an event formed by combining two or more events, Events A or B (inclusive) either A or B or both occurs
 Events A and B - A and B occur
+
+Probabillity of (A or B) = P(A)+P(B) - P(A and B)
