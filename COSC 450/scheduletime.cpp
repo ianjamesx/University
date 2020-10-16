@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <vector>
+#include <iomanip>
 #include <algorithm>
 #include <unistd.h>
 using namespace std;
@@ -12,46 +13,32 @@ struct process {
     int priority;
 
     int completion;
-};
-/*
-struct inputs {
-    int proc_count;
-    int *cpubursts;
-    int *arrivals;
-    int *priorites;
+    float turnaround;
+    float wait;
 };
 
-struct outputs {
-    vector<int> completions;
-    vector<int> timestamps;
-};
-
-//need an ordering struct for sorting by keys (as well as a comparison function)
-struct ordering {
-    int cpuburst;
-    int index;
-};
-
-bool compareOrderings(const ordering &a, const ordering &b){
-    return a.cpuburst < b.cpuburst;
-}*/
-
+//run a process, update process and process timeline
 void run(process&, vector<int>&);
 
+//some utility functions
 void takeInputs(vector<process>&, int, bool, bool);
-
 void printProcs(vector<process>);
-
 void printeTimeline(vector<int>);
-
 bool finishedAll(vector<process>);
 
-//return at timeline of all processes ran over time
+void getTurnWait(vector <process>&);
+
+float avgWait(vector <process>&);
+float avgTurn(vector <process>&);
+
+//all of our algorithms for process scheduling, return:
+//  the list of processes with the completion time
+//  the timeline of which process was ran at which time stamp
 void fcfs(vector<process>&, vector<int>&);
 void sjf(vector<process>&, vector<int>&);
 void srt(vector<process>&, vector<int>&);
 void rr(vector<process>&, vector<int>&);
-void ps();
+void ps(vector<process>&, vector<int>&);
 
 int main(){
 
@@ -91,17 +78,38 @@ int main(){
     //take inputs needed for algo
     takeInputs(p, proc_count, arrivals, priorites);
 
+    //make a copy of p so we can hold onto their cpu burst
+    vector<process> p2 = p;
+
     //run algo
-    rr(p, timeline);
+    if(algo == 1) fcfs(p, timeline);
+    if(algo == 2) sjf(p, timeline);
+    if(algo == 3) srt(p, timeline);
+    if(algo == 4) rr(p, timeline);
+    if(algo == 5) ps(p, timeline);
+
+    //copy their original cpu times over from p2
+    //also need to increment the completion times by 1
+    int i;
+    for(i = 0; i < p.size(); i++){
+        p[i].cpuburst = p2[i].cpuburst;
+        p[i].completion++;
+    }
+
+    cout << "------------------------------------\nResults:\n";
+
+    //get average turnaround, waits
+    getTurnWait(p);
+
+    //print all
 
     printProcs(p);
+    cout << endl;
+    cout << "Average Turnaround: " << avgTurn(p) << endl;
+    cout << "Average Wait: " << avgWait(p) << endl;
+    
     printeTimeline(timeline);
 
-    /*
-    if(algo == 3) out = srt(in);
-    if(algo == 4) out = rr(in);
-    if(algo == 5) out = ps(in);
-*/
     return 0;
 }
 
@@ -163,19 +171,30 @@ void takeInputs(vector<process> &p, int proc_count, bool arrivals, bool priorite
 }
 
 void printProcs(vector<process> p){
+
+    //cout << setw(5);
+
     int i;
+    cout << "Pid" << setw(8) <<  "CPU" << setw(10) << "Arrival" << setw(10) << "Priority" << setw(11) << "CT" << setw(10) << "TT" << setw(10) << "Wait\n";
+
     for(i = 0; i < p.size(); i++){
-        cout << p[i].index << "\t" << p[i].cpuburst << "\t" << p[i].arrival << endl;
+        cout << p[i].index << setw(10) << p[i].cpuburst << setw(10) << p[i].arrival << setw(10) << p[i].priority << setw(10) << 
+                p[i].completion << setw(10) << p[i].turnaround << setw(10) << p[i].wait << endl;
     }
 }
 
 void printeTimeline(vector<int> timeline){
-    int i;
+    int i, j;
+    cout << "\nTimeline:\n(time): (Pid)\n";
     for(i = 0; i < timeline.size(); i++){
-        cout << timeline[i] << " ";
+
+        //print currPID once for all instances found, mark on number number line 
+        cout << i << ": " << timeline[i] << "\n";
     }
+    cout << endl;
 }
 
+//see if there are any process that are unfinished (return true if all finished, false if not)
 bool finishedAll(vector<process> p){
 
     int i;
@@ -277,4 +296,67 @@ void rr(vector<process> &p, vector<int> &timeline){
             curr = 0;
         }
     }
+}
+
+void ps(vector<process> &p, vector<int> &timeline){
+
+    int i;
+
+    while(!finishedAll(p)){
+
+        //init our first process to whichever process has yet to finished (alike in srt())
+        int priority;
+        for(i = 0; i < p.size(); i++){
+            if(p[i].cpuburst > 0){
+                priority = i;
+                break;
+            }
+        }
+
+        //chose next process (assuming it has arrived) with highest priority
+        for(i = 0; i < p.size(); i++){
+
+            //if process has yet to arrive, skip it
+            if(p[i].arrival > timeline.size()) continue;
+
+            //if process complete, also skip
+            if(p[i].cpuburst == 0) continue;
+
+            //if we have an unfinished job with a cpuburst less than shortest one
+            if(p[i].priority < p[priority].priority){
+                priority = i;
+            }
+
+        }
+
+        run(p[priority], timeline);
+
+    }
+
+}
+
+void getTurnWait(vector<process> &p){
+    int i;
+    for(i = 0; i < p.size(); i++){
+        p[i].turnaround = p[i].completion - p[i].arrival;
+        p[i].wait = p[i].turnaround - p[i].cpuburst;
+    }
+}
+
+float avgTurn(vector<process> &p){
+    int i;
+    float total = 0;
+    for(i = 0; i < p.size(); i++){
+        total += p[i].turnaround;
+    }
+    return (total * 1.0 / p.size());
+}
+
+float avgWait(vector<process> &p){
+    int i;
+    float total = 0;
+    for(i = 0; i < p.size(); i++){
+        total += p[i].wait;
+    }
+    return (total * 1.0 / p.size());
 }
