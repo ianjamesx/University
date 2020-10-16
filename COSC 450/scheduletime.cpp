@@ -224,8 +224,16 @@ void sjf(vector<process> &p, vector<int> &timeline){
     int i, j;
     for(i = 0; i < p.size(); i++){
 
+        //init shortest to first unfinished process we find
+        int shortest;
+        for(i = 0; i < p.size(); i++){
+            if(p[i].cpuburst > 0){
+                shortest = i;
+                break;
+            }
+        }
+
         //get next shortest job
-        int shortest = 0;
         for(j = 0; j < p.size(); j++){
 
             //if we have an unfinished job with a cpuburst less than shortest one
@@ -323,7 +331,7 @@ void ps(vector<process> &p, vector<int> &timeline){
             if(p[i].cpuburst == 0) continue;
 
             //if we have an unfinished job with a cpuburst less than shortest one
-            if(p[i].priority < p[priority].priority){
+            if(p[i].priority > p[priority].priority){
                 priority = i;
             }
 
