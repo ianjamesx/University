@@ -169,6 +169,9 @@ Percentile is 100 * (23 + .5) / 40 = 58.75 ~ 59 (round up)
 
 Z score = (x - u) / o where x = value, u = mean, o = standard deviation
 
+IF z-score given, finding value:
+x = u + (z*o)
+
 EVENTS
 Compound events
 an event formed by combining two or more events, Events A or B (inclusive) either A or B or both occurs
