@@ -137,6 +137,17 @@ Compute locater L using formula L = k/100(n) (n=number of values in dataset)
 If L is an integer then Pk = (Lth value + (L+1)th value) / 2
 If L is not an integer then round up to the next larger integer 
 
+Q1 = .25 * n
+Q2 = median
+Q3 = .75 * n
+NOTE, output will be the positions of the values, not the values themselves
+
+IQR = Q3 - Q1
+Lower outlier bound = Q1 - 1.5 * IQR
+Upper outlier bound = Q3 + 1.5 * IQR
+
+Z score = (x - u) / o where x = value, u = mean, o = standard deviation
+
 EVENTS
 Compound events
 an event formed by combining two or more events, Events A or B (inclusive) either A or B or both occurs
