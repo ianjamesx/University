@@ -132,10 +132,17 @@ The standard score (z score) represents distance value is from the mean
 Percentiles - divivde dataset into 100 parts (e.g. 27% percentile)
 
 to find percentile, (e.g. P58 for 58th percentile) compute Locator 
-Compute locater L using formula L = k/100(n) (n=number of values in dataset)
+Compute locater L using formula:
+
+L = k/100(n) 
+
+(n=number of values in dataset)
 
 If L is an integer then Pk = (Lth value + (L+1)th value) / 2
-If L is not an integer then round up to the next larger integer 
+If L is not an integer then round up to the next larger integer
+
+E.G. Find 78th percentile. Assume 85 values in dataset (n = 85)
+L = (78/100) * 85 = 66.3 ~ 67 (always round up)
 
 Q1 = .25 * n
 Q2 = median
