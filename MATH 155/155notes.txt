@@ -143,6 +143,12 @@ If L is not an integer then round up to the next larger integer
 
 E.G. Find 78th percentile. Assume 85 values in dataset (n = 85)
 L = (78/100) * 85 = 66.3 ~ 67 (always round up)
+Value of 78th percentile is in position 67
+
+Assume n = 85 again
+FOR median(Q2): (50/100) * 85 = 15, 15 is an integer, so median would be average of values in positions 15 and 16
+(in case of our dataset, position 15 and 16 are 20 and 21, so median would be (20 + 21)/2 = 20.5
+IF L was not an integer, simply round up, position in that spot is median
 
 Q1 = .25 * n
 Q2 = median
