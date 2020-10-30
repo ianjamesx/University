@@ -192,3 +192,10 @@ r = (n * Exy - Ex * Ey) / Sqrt((n * Ex^2 - (Ex)^2)(n * Ey^2 - (Ey)^2)
 
 If r is positive, there is a positive correlation (as X increases, Y increases)
 
+Least Squares Regression Line (like correlation coefficent for graphs)
+Given X, Y, make table, find mean of X values, mean of Y values
+Then, add columns for X-Xavg and Y-Yavg
+Then, add columns, (X-Xavg)^2, and column (X-Xavg)(Y-Yavg)
+Add up last two columns, the (X-Xavg)^2 is Denominator, column (X-Xavg)(Y-Yavg) is Numerator, fraction (decimal) is B1
+B0 formula: Yavg = B0 + B1(Xavg)
+Yhat = B0 + B1x
