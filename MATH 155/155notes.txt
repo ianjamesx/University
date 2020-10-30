@@ -159,6 +159,10 @@ IQR = Q3 - Q1
 Lower outlier bound = Q1 - 1.5 * IQR
 Upper outlier bound = Q3 + 1.5 * IQR
 
+Box plot:
+|------|-----|----|---------|    *
+min    Q1    Med.  Q3       Max   Outlier
+
 Given value x, find percentile:
 -assume N values in dataset
 -arrange data in increasing order
