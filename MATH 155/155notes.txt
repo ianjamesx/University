@@ -190,3 +190,5 @@ Take summation of each column
 Pretend E is summation
 r = (n * Exy - Ex * Ey) / Sqrt((n * Ex^2 - (Ex)^2)(n * Ey^2 - (Ey)^2)
 
+If r is positive, there is a positive correlation (as X increases, Y increases)
+
