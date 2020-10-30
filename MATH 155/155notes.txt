@@ -165,7 +165,10 @@ Upper outlier bound = Q3 + 1.5 * IQR
 
 Box plot:
 |------|-----|----|---------|    *
-min    Q1    Med.  Q3       Max   Outlier
+LOB    Q1    Med.  Q3       UOB   Outlier
+
+LOB = lower outlier bound
+OUB = upper outlier bound
 
 Given value x, find percentile:
 -assume N values in dataset
