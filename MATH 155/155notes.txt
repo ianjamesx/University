@@ -185,9 +185,15 @@ Probability model - sum of all probabilities must be 1
 
 Probabillity of (A or B) = P(A)+P(B) - P(A and B)
 Mutually exclusive - two events cannot happen at same time
+IF events A and B are mutually exclusive, then P(A or B) = P(A) + P(B)
 
+P(A or B) = P(A) + P(B) - P(A AND B)
+IF A and B are mutually exclusive, P(A or B) + P(A) + P(B)
 P(A and B) = P(A) P(B | A)
 P(A and B) = P(B) P(A | B)
+
+Compliment of event A is that A does not occur
+Compliment: P(A^c) = 1 - P(A)
 
 Correlation Coefficient (r)
 Given X, Y, make table containing X, Y, XY, X^2, Y^2
