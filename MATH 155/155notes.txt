@@ -197,6 +197,9 @@ P(A and B) = P(B) P(A | B)
 IF A and B are independent events
 P(A and B) = P(A)P(B)
 
+Sequence of Events (probability of A, B, C in order)
+P(Sequence) = P(A)P(B)P(C)
+
 Compliment of event A is that A does not occur
 Compliment: P(A^c) = 1 - P(A)
 
