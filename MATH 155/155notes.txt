@@ -183,3 +183,10 @@ Events A and B - A and B occur
 
 Probabillity of (A or B) = P(A)+P(B) - P(A and B)
 Mutually exclusive - two events cannot happen at same time
+
+Correlation Coefficient (r)
+Given X, Y, make table containing X, Y, XY, X^2, Y^2
+Take summation of each column
+Pretend E is summation
+r = (n * Exy - Ex * Ey) / Sqrt((n * Ex^2 - (Ex)^2)(n * Ey^2 - (Ey)^2)
+
