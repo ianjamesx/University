@@ -189,8 +189,13 @@ IF events A and B are mutually exclusive, then P(A or B) = P(A) + P(B)
 
 P(A or B) = P(A) + P(B) - P(A AND B)
 IF A and B are mutually exclusive, P(A or B) + P(A) + P(B)
+
+These two are equivolent
 P(A and B) = P(A) P(B | A)
 P(A and B) = P(B) P(A | B)
+
+IF A and B are independent events
+P(A and B) = P(A)P(B)
 
 Compliment of event A is that A does not occur
 Compliment: P(A^c) = 1 - P(A)
