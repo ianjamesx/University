@@ -126,6 +126,10 @@ Coefficient of variation
 CV - tells how large the standard deviation is relative to the mean (standard dev/mean)
 
 Measures of Position
+
+Five Number Summary:
+min, max, Q1, median, Q3
+
 Description of relative standing of a certain data value within entire data set
 The standard score (z score) represents distance value is from the mean
 
