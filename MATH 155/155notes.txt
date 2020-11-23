@@ -238,3 +238,5 @@ Hyptothesis Testing
 
 Type I error - reject Hypoth, but if actually true, Alpha = P(type I error)
 Type II error - fail to reject Hypoth, when is actually false Beta = P(type II error)
+
+See table from 11-23
