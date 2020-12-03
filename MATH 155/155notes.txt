@@ -255,6 +255,8 @@ HW 10 - critical values for confidence intervals, margin of error, conf. int. fo
 
 Sample test answers
 
+ask banks to go over 5, 6, 9
+
 #3 (refer to hw 10, question 5-8)
 n = 40
 x = 82
@@ -270,6 +272,9 @@ get the conf. interval by x - e < u < x + e
 = 71.41, 92.59
 
 
+
+
+
 #4 (hw 8, question 8-11)
 u = 200
 o = 50
@@ -282,7 +287,9 @@ x = 220, z = .4
 Next, on normal curve, find area between z scores -.6 and .4 (using zscorecalculator.com)
 left z score = -.6, right = .4, area = .381169
 
-ask banks to go over 5 and 6
+
+
+
 
 #7 (similar to 3, refer to HW 10)
 
@@ -302,3 +309,10 @@ To estimate U (x) to within .5 with 95% confidence:
 --------- = (1.96^2 / 30^2) / .5^2 = 13829.8 = 13830 sample size
     e^2
 
+
+
+#11
+
+Use a binomial distribution calc
+n = 8
+p = .3
