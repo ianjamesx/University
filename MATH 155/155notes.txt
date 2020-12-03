@@ -270,5 +270,14 @@ get the conf. interval by x - e < u < x + e
 = 71.41, 92.59
 
 
-#4
+#4 (hw 8, question 8-11)
+u = 200
+o = 50
+probability of being between 170 to 220
 
+Find z scores for x = 170, x = 220
+x = 170, z = -.6
+x = 220, z = .4
+
+Next, on normal curve, find area between z scores -.6 and .4 (using zscorecalculator.com)
+left z score = -.6, right = .4, area = .381169
