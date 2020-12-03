@@ -316,3 +316,5 @@ To estimate U (x) to within .5 with 95% confidence:
 Use a binomial distribution calc
 n = 8
 p = .3
+
+(note: x or fewer implies use of P(X <= x) ...)
