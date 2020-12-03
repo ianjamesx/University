@@ -253,3 +253,22 @@ HW 8 - area under curve, z-values, cumulative normal dist. table, mean/std.dev, 
 HW 9 - find U-x given U, sample size drawn given mean and std. dev, cumulative normal dist. table
 HW 10 - critical values for confidence intervals, margin of error, conf. int. for given mean, 
 
+Sample test answers
+
+#3 (refer to hw 10, question 5-8)
+n = 40
+x = 82
+s = 26
+conf = .99
+freedom = n - 1 = 39
+critical value is given, c (sometimes given as t or z(alpha/2) ) = 2.575
+
+compute margin of error (e) : c * (s / sqrt(n)) = 2.575 * (26 / Sqrt(40)) = 10.5857 = 10.59
+
+get the conf. interval by x - e < u < x + e
+= 82 - 10.59 < u < 82 + 10.59
+= 71.41, 92.59
+
+
+#4
+
