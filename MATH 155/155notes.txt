@@ -246,3 +246,10 @@ Confidence Intervals
 Population with low variation leads to similar samples with low variation, leads to narrow confidence interval
 Lots of variation leads to varied samples with high variation, leads to wider confidence interval
 
+For Exam III:
+HW 6 - probability, events
+HW 7 - counting, permutations, combinations, some binomial experiments
+HW 8 - area under curve, z-values, cumulative normal dist. table, mean/std.dev, percentiles for norm. dists.
+HW 9 - find U-x given U, sample size drawn given mean and std. dev, cumulative normal dist. table
+HW 10 - critical values for confidence intervals, margin of error, conf. int. for given mean, 
+
