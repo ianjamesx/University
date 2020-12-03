@@ -281,3 +281,24 @@ x = 220, z = .4
 
 Next, on normal curve, find area between z scores -.6 and .4 (using zscorecalculator.com)
 left z score = -.6, right = .4, area = .381169
+
+ask banks to go over 5 and 6
+
+#7 (similar to 3, refer to HW 10)
+
+n = 225
+x = 32.5
+s = 30
+
+conf = .95
+freedom = n - 1 = 39
+
+To get critical value, use bottom row of T-Dist. table, see that for 95%, c = 1.960
+find margin of error = c * (s / Sqrt(n)) = 1.96 * (30 / Sqrt(225)) = 32.5 +or- 3.92 = (28.58, 36.42)
+
+To estimate U (x) to within .5 with 95% confidence:
+
+(c * s^2)
+--------- = (1.96^2 / 30^2) / .5^2 = 13829.8 = 13830 sample size
+    e^2
+
