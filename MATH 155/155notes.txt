@@ -240,3 +240,9 @@ Type I error - reject Hypoth, but if actually true, Alpha = P(type I error)
 Type II error - fail to reject Hypoth, when is actually false Beta = P(type II error)
 
 See table from 11-23
+
+Confidence Intervals
+
+Population with low variation leads to similar samples with low variation, leads to narrow confidence interval
+Lots of variation leads to varied samples with high variation, leads to wider confidence interval
+
