@@ -323,6 +323,31 @@ Use the normal distribution calculator to determine it
 answer: 0.1587
 
 
+#10
+95% confidence interval, (.551, .649), apply conf interval
+
+conf = .95
+
+find point estimate x
+in conf interval, point estimate is in center of interval
+a)
+
+x = (.551 + .649) / 2 = .6
+
+NOTE: margin of error is +- .049
+
+We got .049 cause .6 + E = .649, .6 - E = .551
+
+CI: .6 +- E = .6 +- .049
+
+b)
+
+Determine sample size
+
+Sample size obtained from margin of error
+N = (equation given)
+
+
 
 #11
 
@@ -331,6 +356,16 @@ n = 8
 p = .3
 
 (note: x or fewer implies use of P(X <= x) ...)
+
+
+#12
+find level of confidence for 1.53, eg. whats probability of middle area under curve betweeen -1.53 and 1.53
+Look for value +-1.53 in the standard norm value table
+
+area to left of -1.53 is .063
+area to left of 1.53 is .9370
+
+we want middle area, so find .9370 - .063 = .873
 
 
 Some more notes:
