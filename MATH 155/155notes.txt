@@ -289,6 +289,12 @@ left z score = -.6, right = .4, area = .381169
 
 
 
+#6
+Find a such that P(z < a) = 0.75 where z denotes the standard normal random variable
+
+In this case, a is the area to the left (if it were to be reversed z > a, then you would take inverse 1 - .75 = .25 to use for invNorm)
+simply use inversenorm (invNorm(.75, 0, 1) = .674
+so, a = .674
 
 
 #7 (similar to 3, refer to HW 10)
@@ -308,6 +314,13 @@ To estimate U (x) to within .5 with 95% confidence:
 (c * s^2)
 --------- = (1.96^2 / 30^2) / .5^2 = 13829.8 = 13830 sample size
     e^2
+
+
+
+#9
+
+Use the normal distribution calculator to determine it 
+answer: 0.1587
 
 
 
