@@ -319,8 +319,9 @@ To estimate U (x) to within .5 with 95% confidence:
 
 #9
 
-Use the normal distribution calculator to determine it 
-answer: 0.1587
+Z score = 75 - 84 / 3 = -9 / 3 = -3
+look up -3 in table
+=.0013
 
 
 #10
