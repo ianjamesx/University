@@ -248,7 +248,7 @@ Lots of variation leads to varied samples with high variation, leads to wider co
 
 For Exam III:
 HW 6 - probability, events
-HW 7 - counting, permutations, combinations, some binomial experiments
+HW 7 - counting, permutations, combinations, some binomial experiments, mean of random discrete variable
 HW 8 - area under curve, z-values, cumulative normal dist. table, mean/std.dev, percentiles for norm. dists.
 HW 9 - find U-x given U, sample size drawn given mean and std. dev, cumulative normal dist. table
 HW 10 - critical values for confidence intervals, margin of error, conf. int. for given mean, 
@@ -331,3 +331,12 @@ n = 8
 p = .3
 
 (note: x or fewer implies use of P(X <= x) ...)
+
+
+Some more notes:
+
+if A and B are independent events, then: P(A and B) = P(A)P(B)
+
+Properties of discrete probability distributions:
+In a probability distribution, each probability must be between 0 and 1, and the sum of all the probabilities must be equal to 1.
+
