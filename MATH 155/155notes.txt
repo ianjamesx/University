@@ -376,3 +376,31 @@ if A and B are independent events, then: P(A and B) = P(A)P(B)
 Properties of discrete probability distributions:
 In a probability distribution, each probability must be between 0 and 1, and the sum of all the probabilities must be equal to 1.
 
+
+FINAL EXAM
+
+Practice exam:
+
+#24
+confidence interval (22, 26):
+point estimate: (22 + 26) / 2 = 48/2 = 24
+xbar = 24
+margin of error = 26 - 24 = 2
+x+- margin of error
+
+
+P-Values in Hypothesis Testing
+Two sample T-Test (independent samples)
+
+Test statistic t=2.64
+P-Value = .005
+
+population 1: university 1
+population 2: university 2
+
+Sample study to see if students drink more at university 1 vs university 2
+
+P-value: probability of getting results as extreme as obtained when null hypothesis is true
+
+(e.g. lets say true mean = 50, sd = 6, sample mean (xbar) = 45, sample n = 75, P-value is probability that sample mean will not be true mean)
+Test stat = 45 - 50 / 6 / sqrt(75) = -7.22
