@@ -404,3 +404,4 @@ P-value: probability of getting results as extreme as obtained when null hypothe
 
 (e.g. lets say true mean = 50, sd = 6, sample mean (xbar) = 45, sample n = 75, P-value is probability that sample mean will not be true mean)
 Test stat = 45 - 50 / 6 / sqrt(75) = -7.22
+Then (through minitab) P-value is ~0, which implies true value is less than 50
