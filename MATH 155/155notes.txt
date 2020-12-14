@@ -418,3 +418,8 @@ Binomial Probability Calculator shows its 0.01696, or ~.017
 3. Binomial Probability Calculator 
 
 If P <= a, the null hypothesis is rejected at the a level.
+
+12. Given mean, standard dev, normal distribution, find value or percent
+first find z score, then find area under curve
+
+if given percent (e.g. find 90%) then find z score for 90% area under curve, then solve for x given z score
