@@ -423,3 +423,11 @@ If P <= a, the null hypothesis is rejected at the a level.
 first find z score, then find area under curve
 
 if given percent (e.g. find 90%) then find z score for 90% area under curve, then solve for x given z score
+
+
+
+FROM DA LEAKS
+
+30. Central limit theorem states that sampling distribution of x is approx normal? true
+
+31. Sample size 56, drawn from pop of u = 26, std dev = 11, find probability that x will be less than 28, refer to hw 9
