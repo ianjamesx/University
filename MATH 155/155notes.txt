@@ -405,3 +405,16 @@ P-value: probability of getting results as extreme as obtained when null hypothe
 (e.g. lets say true mean = 50, sd = 6, sample mean (xbar) = 45, sample n = 75, P-value is probability that sample mean will not be true mean)
 Test stat = 45 - 50 / 6 / sqrt(75) = -7.22
 Then (through minitab) P-value is ~0, which implies true value is less than 50
+
+
+
+155 Final Exam Practice
+
+1. Alternate is simply complemented null hypoth, so u=75 (e.g. if H0 is u is not 75, then H1  is u = 75)
+
+2.20% chance of rolling a 6, die is rolled 6 times, what is probability of at least 4 sixes?
+Binomial Probability Calculator shows its 0.01696, or ~.017
+
+3. Binomial Probability Calculator 
+
+If P <= a, the null hypothesis is rejected at the a level.
