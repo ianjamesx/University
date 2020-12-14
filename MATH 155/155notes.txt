@@ -431,3 +431,9 @@ FROM DA LEAKS
 30. Central limit theorem states that sampling distribution of x is approx normal? true
 
 31. Sample size 56, drawn from pop of u = 26, std dev = 11, find probability that x will be less than 28, refer to hw 9
+
+ox=o/(Math.sqrt(n)) = 1.4699368305183342
+z=(x-ux)/ox = 1.360602686099615
+Then use z score to find left tail
+
+left tail: 0.913085
