@@ -1,5 +1,6 @@
-# <del>Salisbury University, Computer Science</del>
-# University Of North Carolina at Chapel Hill, Computer Science
+# <del>Salisbury University, Computer Science (COSC)</del>
+Graduated May 2021, GPA: 3.81 / 4.0, GPA in COSC: 4.0 / 4.0
+# University Of North Carolina at Chapel Hill, Computer Science (COMP)
 All code related to university courses. Labs, projects, code-exams, etc.
 
 ## Stats:
