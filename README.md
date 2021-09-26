@@ -1,7 +1,6 @@
-# Salisbury University, Computer Science Course Content
+# Salisbury University, Computer Science
+# University Of North Carolina at Chapel Hill, Computer Science
 All code related to university courses. Labs, projects, code-exams, etc.
-
-## Current GPA in COSC: 4.0 / 4.0
 
 ## Stats:
 
