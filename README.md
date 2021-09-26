@@ -1,4 +1,4 @@
-# Salisbury University, Computer Science
+# <del>Salisbury University, Computer Science</del>
 # University Of North Carolina at Chapel Hill, Computer Science
 All code related to university courses. Labs, projects, code-exams, etc.
 
