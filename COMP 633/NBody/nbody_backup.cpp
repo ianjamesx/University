@@ -41,27 +41,12 @@ int main(int argc, char *argv[]){
         for(int i=0; i < bodies.size(); i++){
 
             double x_force = 0.0, y_force = 0.0;
-            double xj_force = 0.0, yj_force = 0.0;
-            for(int j=i; j < bodies.size(); j++){
+            for(int j=0; j < bodies.size(); j++){
                 if(i == j) continue;
                 vector<double> f = force(bodies[i], bodies[j]);
                 allops++;
                 x_force += f[0];
                 y_force += f[1];
-
-                //apply opposite force to body j
-                xj_force -= f[0];
-                yj_force -= f[1];
-
-                //update body j before we exit the inner loop
-                double a_jx = xj_force / bodies[j].mass;
-                double a_jy = yj_force / bodies[j].mass;
-
-                //update velocity then position
-                bodies[j].velocity[0] += T * a_jx;
-                bodies[j].velocity[1] += T * a_jy;
-                bodies[j].position[0] += T * bodies[j].velocity[0];
-                bodies[j].position[1] += T * bodies[j].velocity[1];
             }
 
             //calc acceleration
@@ -74,7 +59,6 @@ int main(int argc, char *argv[]){
             bodies[i].position[0] += T * bodies[i].velocity[0];
             bodies[i].position[1] += T * bodies[i].velocity[1];
 
-
         }
     }
 
@@ -84,7 +68,7 @@ int main(int argc, char *argv[]){
     cout << "Time taken by function: "<< duration.count() << " microseconds" << endl;
     cout << "All operations: " << allops << endl;
 
-    printBodies(bodies);
+    printBodies(bodies); 
     return 0;
 
 }

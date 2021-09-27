@@ -20,11 +20,10 @@ void initBodies(vector<body> &bodies);
 void printBodies(vector<body> bodies);
 vector<double> force(body b1, body b2);
 double norm(vector<double> v1);
+void body_comp(vector<body> b1, vector<body> b2);
 void v_divide(vector<double> &v, double s);
 
 int main(int argc, char *argv[]){
-
-    auto start = chrono::high_resolution_clock::now();
 
     int n = atoi(argv[1]);
     //cout << n << endl;
@@ -32,6 +31,9 @@ int main(int argc, char *argv[]){
 
     vector<body> bodies(n);
     initBodies(bodies);
+
+    //copy our initial bodies
+    vector<body> bodies_cp = bodies;
 
     long int allops = 0;
 
@@ -41,27 +43,12 @@ int main(int argc, char *argv[]){
         for(int i=0; i < bodies.size(); i++){
 
             double x_force = 0.0, y_force = 0.0;
-            double xj_force = 0.0, yj_force = 0.0;
-            for(int j=i; j < bodies.size(); j++){
+            for(int j=0; j < bodies.size(); j++){
                 if(i == j) continue;
                 vector<double> f = force(bodies[i], bodies[j]);
                 allops++;
                 x_force += f[0];
                 y_force += f[1];
-
-                //apply opposite force to body j
-                xj_force -= f[0];
-                yj_force -= f[1];
-
-                //update body j before we exit the inner loop
-                double a_jx = xj_force / bodies[j].mass;
-                double a_jy = yj_force / bodies[j].mass;
-
-                //update velocity then position
-                bodies[j].velocity[0] += T * a_jx;
-                bodies[j].velocity[1] += T * a_jy;
-                bodies[j].position[0] += T * bodies[j].velocity[0];
-                bodies[j].position[1] += T * bodies[j].velocity[1];
             }
 
             //calc acceleration
@@ -74,17 +61,53 @@ int main(int argc, char *argv[]){
             bodies[i].position[0] += T * bodies[i].velocity[0];
             bodies[i].position[1] += T * bodies[i].velocity[1];
 
+        }
+    }
+
+    for(int t = 0; t < k; t++){
+
+        //for each body, get the total force 
+        for(int i=0; i < bodies_cp.size(); i++){
+
+            double x_force = 0.0, y_force = 0.0;
+            double xj_force = 0.0, yj_force = 0.0;
+            for(int j=i; j < bodies_cp.size(); j++){
+                if(i == j) continue;
+                vector<double> f = force(bodies_cp[i], bodies_cp[j]);
+                allops++;
+                x_force += f[0];
+                y_force += f[1];
+
+                //apply opposite force to body j
+                xj_force -= f[0];
+                yj_force -= f[1];
+
+                //update body j before we exit the inner loop
+                double a_jx = xj_force / bodies_cp[j].mass;
+                double a_jy = yj_force / bodies_cp[j].mass;
+
+                //update velocity then position
+                bodies_cp[j].velocity[0] += T * a_jx;
+                bodies_cp[j].velocity[1] += T * a_jy;
+                bodies_cp[j].position[0] += T * bodies_cp[j].velocity[0];
+                bodies_cp[j].position[1] += T * bodies_cp[j].velocity[1];
+            }
+
+            //calc acceleration
+            double a_x = x_force / bodies_cp[i].mass;
+            double a_y = y_force / bodies_cp[i].mass;
+
+            //update velocity then position
+            bodies_cp[i].velocity[0] += T * a_x;
+            bodies_cp[i].velocity[1] += T * a_y;
+            bodies_cp[i].position[0] += T * bodies_cp[i].velocity[0];
+            bodies_cp[i].position[1] += T * bodies_cp[i].velocity[1];
 
         }
     }
 
-    auto stop = chrono::high_resolution_clock::now();
-    auto duration = chrono::duration_cast<chrono::microseconds>(stop - start);
-  
-    cout << "Time taken by function: "<< duration.count() << " microseconds" << endl;
-    cout << "All operations: " << allops << endl;
-
-    printBodies(bodies);
+    body_comp(bodies, bodies_cp);
+    //printBodies(bodies); 
     return 0;
 
 }
@@ -130,6 +153,15 @@ void initBodies(vector<body> &bodies){
     for(int i=0; i < bodies.size(); i++){
         double y_offset = rand() * 1.0;
         bodies[i].position = {(i * spacing), y_offset};
+    }
+}
+
+void body_comp(vector<body> b1, vector<body> b2){
+    for(int i=0; i < b1.size(); i++){
+        cout << "Body " << i << endl;
+        cout << "Position(" << b1[i].position[0] << ", " << b1[i].position[1] << "), (" << b2[i].position[0] << ", " << b2[i].position[1] << ")" << endl;
+        cout << "Velocity(" << b1[i].velocity[0] << ", " << b1[i].velocity[1] << "), (" << b2[i].velocity[0] << ", " << b2[i].velocity[1] << ")" << endl;
+        cout << "-------------------" << endl;
     }
 }
 
